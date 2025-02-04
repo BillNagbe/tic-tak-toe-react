@@ -1,23 +1,38 @@
 
+// handling squares
+function Squares({value}) {
+
+    // handles clicks
+    function handleClick() {
+        console.log("Clicked!");
+    };
+
+
+    return <button className="square" onClick={handleClick}>{value}</button>;
+}
+
+
+
 function Board() {
     return (
+        // board spaces
     <div className="board">
         <div className="board-row">
-            <button className="square">1</button>
-            <button className="square">2</button>
-            <button className="square">3</button>
+            <Squares value="1"  />
+            <Squares value="2"/>
+            <Squares value="3"/>
         </div>
 
         <div className="board-row">
-            <button className="square">4</button>
-            <button className="square">5</button>
-            <button className="square">6</button>
+            <Squares value="4"/>
+            <Squares value="5"/>
+            <Squares value="6"/>
         </div>
 
         <div className="board-row">
-            <button className="square">7</button>
-            <button className="square">8</button>
-            <button className="square">9</button>
+            <Squares value="7"/>
+            <Squares value="8"/>
+            <Squares value="9"/>
         </div>
     </div>
     );
