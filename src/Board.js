@@ -1,14 +1,18 @@
+import { useState } from "react";
 
 // handling squares
-function Squares({value}) {
+function Squares() {
+    //stores state of squares
+    const [val, setVal] = useState(null);
 
     // handles clicks
     function handleClick() {
-        console.log("Clicked!");
+        setVal("X");
+        console.log(val);
     };
 
 
-    return <button className="square" onClick={handleClick}>{value}</button>;
+    return <button className="square" onClick={handleClick}>{val}</button>;
 }
 
 
@@ -18,21 +22,21 @@ function Board() {
         // board spaces
     <div className="board">
         <div className="board-row">
-            <Squares value="1"  />
-            <Squares value="2"/>
-            <Squares value="3"/>
+            <Squares  />
+            <Squares />
+            <Squares />
         </div>
 
         <div className="board-row">
-            <Squares value="4"/>
-            <Squares value="5"/>
-            <Squares value="6"/>
+            <Squares />
+            <Squares />
+            <Squares />
         </div>
 
         <div className="board-row">
-            <Squares value="7"/>
-            <Squares value="8"/>
-            <Squares value="9"/>
+            <Squares />
+            <Squares />
+            <Squares />
         </div>
     </div>
     );
